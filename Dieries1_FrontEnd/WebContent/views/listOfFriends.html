@@ -1,0 +1,20 @@
+<h3 class="col-md-offset-2" style="margin-top:50px">List of Friends</h3>
+<div class="well col-md-8 col-md-offset-2">
+<table class=" col-md-offset-4" style="margin-top:20px">
+<tr ng-repeat="friend in friends">
+
+<td ng-if="currentUser.userName!=friend.fromId">{{friend.fromId | uppercase}}</td>
+
+<td ng-if="currentUser.userName!=friend.toId">{{friend.toId | uppercase}}</td>
+
+<!-- <td ng-if="currentUser.username!=friend.fromId">
+<img src="http://localhost:8080/project2_backend/getprofilepic/{{friend.fromId}}" height="40px" width="40px" ></td>
+
+<td ng-if="currentUser.username!=friend.toId">
+<img src="http://localhost:8080/project2_backend/getprofilepic/{{friend.toId}} " height="40px" width="40px">
+</td> -->
+</tr>
+
+
+</table>
+</div>

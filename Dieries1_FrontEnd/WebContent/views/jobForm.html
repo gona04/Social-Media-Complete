@@ -1,0 +1,38 @@
+<h3 class="col-md-offset-2">Save a Job</h3>
+<form class="well col-md-6 col-md-offset-2">
+	<table class="col-md-offset-2">
+
+<tr>
+<td>{{error.message}}</td>
+</tr>
+
+<tr>
+<td>Job Title</td><td><input type="text" ng-model="job.jobTitle" class="form-control"></td>
+</tr>
+
+<tr>
+<td>Skills Required</td><td><input type="text" ng-model="job.skillsRequired" class="form-control"></td>
+</tr>
+
+<tr>
+<td>Years of Experience</td><td><input type="text" ng-model="job.yrsOfExp" class="form-control"></td>
+</tr>
+
+<tr>
+<td>Salary</td><td><input type="text" ng-model="job.salary" class="form-control"></td>
+</tr>
+
+<tr>
+<td>Company Name</td><td><input type="text" ng-model="job.companyName" class="form-control"></td>
+</tr>
+
+<tr>
+<td>Location</td><td><input type="text" ng-model="job.location" class="form-control"></td>
+</tr>
+<tr >
+<td><a href="" ng-click="saveAJob()" class="btn btn-warning" value="Save"><span class="glyphicon glyphicon-share"></span></a></td>
+<td><a href="/" class=" btn btn-primary" ><span class="glyphicon glyphicon-remove-sign"></span></a>
+</tr>
+</table>
+</form>
+</div>

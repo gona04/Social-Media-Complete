@@ -1,0 +1,41 @@
+<div>
+<h3 class="col-md-offset-2" style="margin-top:50px">Edit Profile</h3>
+<form class="well col-md-6 col-md-offset-2">
+<table class="col-md-offset-2">
+<tr>
+<td>Enter username</td> <td> <input type="text"  ng-model="user.userName" disabled class="form-control"></td>
+</tr>
+
+<tr>
+<td>Enter password</td><td><input type="password" ng-model="user.password" class="form-control"></td>
+</tr>
+
+<tr>
+<td>Enter firstname</td><td><input type="text" ng-model="user.firstName" class="form-control"></td>
+</tr>
+
+<tr>
+<td>Enter lastname</td> <td><input type="text" ng-model="user.lastName" class="form-control"></td>
+</tr>
+
+<tr>
+<td>Enter Email</td> <td> <input type="email" ng-model="user.email" class="form-control">
+</tr>
+</table>
+<!-- Enter phonenumber <input type="text" ng-model="user.phonenumber"><br> -->
+<div ng-hide="currentUser.role=='ADMIN'" class="col-md-6 col-md-offset-4"> Select Role<br>
+<input type="radio" value="STUDENT" ng-model="user.role" ng-hide="currentUser.role=='ADMIN'">Student <br>
+<input type="radio" value="ALUMINI" ng-model="user.role" ng-hide="currentUser.role=='ADMIN'">Alumini<br>
+<input type="radio" value="EMPLOYEE" ng-model="user.role" ng-hide="currentUser.role=='ADMIN'">Employee<br>
+</div>
+<table>
+<tr class="col-md-6 col-md-offset-6">
+<td>
+<a href="" ng-click="userUpdate()" class="btn btn-warning"><span class="glyphicon glyphicon-ok"></span></a>
+</td>
+<td><a href="#/" class="btn btn-warning"><span class="glyphicon glyphicon-remove"></span></a>
+</td>
+</tr>
+</table>
+</form>
+</div>

@@ -1,0 +1,36 @@
+<h3 class="col-md-offset-2" style="margin-top:50px">Login</h3>
+<div class="well col-md-8 col-md-offset-2">
+<table class=" col-md-offset-4" style="margin-top:20px">
+	<tr>
+		<td style="color:red;">{{error.message}}</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="text" placeholder="Username" ng-model="user.userName" class="form-control col-md-2">
+			<!-- {{user.userName}} -->
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="text" placeholder="Password" ng-model="user.password" ng-show="pwd" class="form-control col-md-4">
+			<!-- {{user.password}} -->
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="password" placeholder="Password" ng-model="user.password" ng-hide="pwd" class="form-control col-md-4">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="checkbox" ng-model="pwd">
+		</td>
+	</tr>
+	<!-- submit button -->
+	<tr>
+		<td>
+		<input type="button" value="login" ng-click="login()" class="btn btn-warning col-md-offset-2">
+		</td>
+	</tr>
+</table>
+</div>

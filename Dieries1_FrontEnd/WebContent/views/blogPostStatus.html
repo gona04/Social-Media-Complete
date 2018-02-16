@@ -1,0 +1,7 @@
+Blog Post titles = {{blogPost.blogtitle}}
+is
+<br>
+<span ng-if="blogPost.approved">Approved</span>
+<span ng-if="!blogPost.approved">Rejected for reason:<br/>
+{{blogPost.rejectionReason}}
+</span>

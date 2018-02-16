@@ -1,0 +1,33 @@
+<div ng-show="currentUser.role == 'ADMIN'">
+	<div class=" col-md-10 col-md-offset-1">
+<div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<div style="color:#f0ad4e"><b>{{blogPost.blogtitle}}</b></div>
+<span><strong>Created By:<br/></strong>{{blogPost.postedBy.userName}}</span><br/>
+ <span><strong>on:<br/></strong>{{blogPost.postedOn | date:'medium'}}</span>
+          
+          </div>
+          
+          <div class="panel-body">
+          {{blogPost.description}}
+          </div>   
+          
+          <form>
+          	<span class= "col-md-4 col-md-offset-2">
+	        <input type="radio" value="true" ng-model="blogPost.approved" ng-click = "setValueForRejectionTxT(false)" class="radio-input"><span class="radio-label">Accept</span>
+			<input type="radio" value="false" ng-model="blogPost.approved" ng-click= "setValueForRejectionTxT(true)" class="radio-input"><span class="radio-label">Reject</span>
+			  </span>
+			  <div ng-show="showRejectionTxT">
+			  Enter the reason for rejection
+			  <textarea rows="3" cols="10" ng-model="blogPost.rejectionReason"></textarea>
+			  </div>
+			  <br>
+			 
+			  <input type="button" ng-click="updateApproval()" value="Update Blog" class="btn btn-warning col-md-offset-5">
+          </form>
+         
+</div>
+</div>
+</div>
+</div>
